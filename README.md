@@ -1,6 +1,6 @@
 # Botbuilder-front
 
-![Demo](https://github.com/nickyfoster/tgbotbuilder-front/raw/master/docs/front.png)
+![Demo](https://github.com/nickyfoster/tgbotbuilder-front/raw/main/docs/front.png)
 
 Yet another chatbot builder UI.
 
