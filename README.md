@@ -1,6 +1,8 @@
-# 🚀 Welcome to your new awesome project!
+# Telegram bot builder frontend
 
-This project has been created using **webpack-cli**, you can now run
+This is a fro
+
+Use [Botbuilder Backend](https://github.com/nickyfoster/tgbotbuilder) API for rendering and running your bot.
 
 ```
 npm run build
