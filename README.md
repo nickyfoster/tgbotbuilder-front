@@ -1,14 +1,15 @@
-# Botbuilder-front
+# 🚀 Welcome to your new awesome project!
 
-![Demo](https://github.com/nickyfoster/tgbotbuilder-front/raw/main/docs/front.png)
+This project has been created using **webpack-cli**, you can now run
 
-Yet another chatbot builder UI.
+```
+npm run build
+```
 
-Use [Botbuilder Backend](https://github.com/nickyfoster/tgbotbuilder) API for rendering and running your bot.
+or
 
+```
+yarn build
+```
 
-⭐ [Forked from jerosoler/Drawflow](https://github.com/jerosoler/Drawflow)
-
-
-## License
-MIT License
+to bundle your application

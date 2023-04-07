@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  nginx:
+    image: nginx
+    volumes:
+      - ./configs/:/etc/nginx/conf.d
+    ports:
+      - 80:80

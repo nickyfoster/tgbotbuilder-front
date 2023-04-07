@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Botbuilder</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="css/drawflow.css" />
+  <link rel="stylesheet" type="text/css" href="css/beautiful.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+    integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+  <script src="lib/drawflow.js"></script>
+  <script type="module" src="js/index.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script  type="module" src="js/editor.js"></script>
+  <script src="js/ui.js"></script>
+  
+  <header>
+    <h2>Botbuilder</h2>
+  </header>
+
+  <div class="wrapper">
+    <div class="col">
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="tg-bot-start">
+        <i class="fab fa-telegram"></i><span> [Telegram Bot] Start</span>
+      </div>
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="tg-bot-text">
+        <i class="fab fa-telegram"></i><span> [Telegram Bot] Text</span>
+      </div>
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="tg-bot-end">
+        <i class="fab fa-telegram"></i><span> [Telegram Bot] End</span>
+      </div>
+      <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="tg-bot-config">
+        <i class="fab fa-telegram"></i><span> [Telegram Bot] Config</span>
+      </div>
+    </div>
+    <div class="col-right">
+      <div class="menu">
+        <ul>
+          <li onclick="editor.changeModule('Home'); changeModule(event);" class="selected">Home</li>
+        </ul>
+      </div>
+      <div id="drawflow" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="btn-export" id="submit-button">Compile</div>
+        <div class="btn-deploy" id="deploy-button">Deploy</div>
+        <div class="btn-logout" id="logout-button">Logout</div>
+
+        <div class="alert-exported" id="saved-notification" style="display:none">Submitted!</div>
+        <div class="btn-clear" onclick="editor.clearModuleSelected()" style="display:none">Clear</div>
+        <div class="bar-zoom">
+          <i class="fas fa-search-minus" onclick="editor.zoom_out()"></i>
+          <i class="fas fa-search" onclick="editor.zoom_reset()"></i>
+          <i class="fas fa-search-plus" onclick="editor.zoom_in()"></i>
+        </div>
+        <div id="popup-message" class="popup-message">
+          <div class="popup-message-content">
+            <button class="popup-message-close">&times;</button>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
